@@ -15,7 +15,7 @@
         fetch('http://91.241.64.178:7081/api/users', {
             method: 'GET',
             origin: 'localhost',
-            mode: 'no-cors'
+            //mode: 'no-cors'
         }).then(res => {
             alert(res.headers.get("set-cookie"));
         })
