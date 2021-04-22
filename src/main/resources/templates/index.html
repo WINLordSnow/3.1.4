@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<button id="btn" class="btn btn-info">Сделаем последнюю задачу</button>
+<script>
+    $('#btn').click(function () {
+        fetch('http://91.241.64.178:7081/api/users', {
+            method: 'GET',
+            origin: 'localhost',
+            mode: 'no-cors'
+        }).then(res => {
+            alert(res.headers.get("set-cookie"));
+        })
+    })
+</script>
+</body>
+</html>
